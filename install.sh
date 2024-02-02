@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if not [[ $1 == "web" ]]; then
+if [[ $1 == "install" ]]; then
 ZDOT="$HOME/.zshell"
 ZSHRC="$HOME/.zshrc"
 
@@ -13,7 +13,7 @@ else
   cd $HOME
   git clone https://github.com/grunwmar/zshell.git zshell-install
   cd zshell-install
-  sh ./install.sh
+  sh ./install.sh install
   cd ..
   rm -rf zshell-install
 fi
