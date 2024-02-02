@@ -23,6 +23,8 @@ alias @aliases="edit_n_reload $ZDOT/aliases.zsh"
 alias @prompt="edit_n_reload $ZDOT/prompt.zsh"
 
 clear
+USER=$(whoami)
+HOSTNAME=$(hostname)
 echo ""
 echo -e "   \e[37m$(date)\e[0m"
 echo ""
