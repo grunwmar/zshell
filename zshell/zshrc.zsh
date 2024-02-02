@@ -18,7 +18,7 @@ function edit_n_reload () {
 	rezsh
 }
 
-alias @zshrc="edit_n_reload $ZDOT/../zshrc.zsh"
+alias @zshrc="edit_n_reload $ZDOT/zshrc.zsh"
 alias @aliases="edit_n_reload $ZDOT/aliases.zsh"
 alias @prompt="edit_n_reload $ZDOT/prompt.zsh"
 
