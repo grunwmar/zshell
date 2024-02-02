@@ -26,5 +26,7 @@ clear
 echo ""
 echo -e "   \e[37m$(date)\e[0m"
 echo ""
-echo -e "   \e[37muser:  \e[96m$USER\e[37m@\e[94m$HOSTNAME\e[0m"
+if [[ -n $USER$HOSTNAME ]]; then
+  echo -e "   \e[37muser:  \e[96m$USER\e[37m@\e[94m$HOSTNAME\e[0m"
+fi
 echo -e "   \e[37mshell: \e[94m$SHELL\e[0m"
