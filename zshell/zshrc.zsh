@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+export SHELL=$(which zsh)
+
 if [[ -z $ZDOT ]]; then
   ZDOT="$HOME/.zshell"
 fi
