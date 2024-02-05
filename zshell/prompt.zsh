@@ -9,15 +9,23 @@ function icon() {
     fi
 }
 
-tux_icon=$(icon '🐧 ' '')
-folder_icon=$(icon ' 📂 ' ':')
-dollar_icon=$(icon '✒️ ' '$')
-clock_icon=$(icon ' 🕐 ' '')
-pc_icon=$(icon ' 💻 ' ' ')
-crown_icon=$(icon ' 👑 ')
-error_icon=$(icon '⚠️  ' '')
 
-PROMPT=$'\n'
-PROMPT+="%(!.[$crown_icon%F{11}root%f].$tux_icon%F{14}%n%f)$folder_icon%F{10}%3~%f$dollar_icon "
+precmd() {
+  tux_icon=$(icon '🪲 ' '›')
+  clock_icon=$(icon '⏳ ' ' ')
+  pc_icon=$(icon ' 💻 ' ' ')
 
-RPROMPT="%(?.. $error_icon%F{9}%?%f)$clock_icon%F{12}%T%f$pc_icon%F{4}%m%f"
+  PROMPT=$'\n'
+  PROMPT+="%(!.[%F{11}root%f].$tux_icon%F{2}%n%f) %F{10}%3~%f %(!.#.%%) "
+
+  COLS=$(tput cols)
+  echo $COLS
+  if [[ $COLS -ge 80 ]]; then
+    echo "1"
+    RPROMPT="%(?..%F{9}%?%f)$clock_icon%F{12}%T%f$pc_icon%F{4}%m%f"
+    else
+    RPROMPT=""
+  fi
+}
+precmd
+
