@@ -46,5 +46,5 @@ echo ""
 IFS_OLD=$IFS
 IFS=$'\n'
 for line in ${(f)"$(<$ZDOT/welcome_screen.txt)"}; do
-    echo -e "   $line\e[0m"
+    echo -e "   $line \e[0m"
 done
