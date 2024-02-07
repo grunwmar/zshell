@@ -23,8 +23,6 @@ function rezsh () {
 }
 
 
-
-
 function edit_n_reload () {
 	ed "$1"
 	rezsh
@@ -44,4 +42,9 @@ if [[ -n $USER$HOSTNAME ]]; then
   echo -e "   \e[37muser:  \e[96m$USER\e[37m@\e[94m$HOSTNAME\e[0m"
 fi
 echo -e "   \e[37mshell: \e[94m$SHELL\e[0m"
-
+echo ""
+IFS_OLD=$IFS
+IFS=$'\n'
+for line in ${(f)"$(<$ZDOT/welcome_screen.txt)"}; do
+    echo -e "   $line\e[0m"
+done
