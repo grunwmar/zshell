@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-
+PYTHON=$ZDOT/python
 function icon() {
     if [[ $ICONS == "true" ]]; then
       echo "$1"
@@ -11,19 +11,19 @@ function icon() {
 
 
 precmd() {
-  tux_icon=$(icon '🪲 ' '›')
-  clock_icon=$(icon '⏳ ' ' ')
-  pc_icon=$(icon ' 💻 ' ' ')
 
+  HOSTNAME=$(python3 $PYTHON/strcut.py $ZSH_VAR_HOSTNAME_LENGTH $(hostname))
+  PWD_PATH=$(python3 $PYTHON/pwd_decor.py "$PWD" 3 14 10)
   PROMPT=$'\n'
-  PROMPT+="%(!.[%F{11}root%f].$tux_icon%F{2}%n%f) %F{10}%3~%f %(!.#.%%) "
+  PROMPT+="%(!.[%F{11}root%f].›%F{2}%n%f) $PWD_PATH %(!.#.%%) "
 
   COLS=$(tput cols)
   if [[ $COLS -ge 70 ]]; then
-    RPROMPT="%(?..%F{9}%?%f)$clock_icon%F{12}%T%f$pc_icon%F{4}%m%f"
+    RPROMPT="%(?..%F{9}%?%f) %F{4}${HOSTNAME}%f %F{12}%T%f"
     else
     RPROMPT=""
   fi
 }
+
 precmd
 
