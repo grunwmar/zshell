@@ -3,7 +3,7 @@ import sys
 
 def cut_string(string, n=None):
     if len(string) > n and n is not None:
-        return string[0:n]+"..."
+        return string[0:n]+"…"
     return string
 
 

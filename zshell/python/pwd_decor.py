@@ -18,7 +18,5 @@ def path_decor(path, levels, slash_color, dir_color):
     return f"%F{{{slash_color}}}/%f".join(colorized_dirs)
 
 
-
-
 if __name__ == "__main__":
     print(path_decor(*sys.argv[1:5]))
