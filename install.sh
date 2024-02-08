@@ -21,4 +21,3 @@
   echo 'export ZDOT='"$ZDOT" >> $ZSHRC
   echo 'source $ZDOT/zshrc.zsh' >> $ZSHRC
 
-  exec zsh
