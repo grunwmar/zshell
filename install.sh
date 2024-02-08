@@ -8,10 +8,11 @@
   read answ
 
   case $answ in
-    "y"|"Y"|"yes"|"Yes"|"YES")
+    y|Y|yes)
       rm -rf $HOME/.zshell $HOME/.zshrc
     ;;
     *)
+      echo "Exiting..."
       exit
     ;;
   esac
