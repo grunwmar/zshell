@@ -3,7 +3,7 @@
   ZDOT="$HOME/.zshell"
   ZSHRC="$HOME/.zshrc"
 
-  echo "Remove old .zshrc and .zshell file and directory (required for intstall)? [y/N] "
+  echo -n "Remove old .zshrc and .zshell file and directory (required for intstall)? [y/N] "
   read answ
 
   case $answ in
@@ -15,9 +15,10 @@
       exit
     ;;
   esac
-
   cp -r ./zshell "$ZDOT"
 
   echo "#!/usr/bin/env zsh" > $ZSHRC
   echo 'export ZDOT='"$ZDOT" >> $ZSHRC
   echo 'source $ZDOT/zshrc.zsh' >> $ZSHRC
+
+  exec zsh
