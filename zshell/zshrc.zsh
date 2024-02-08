@@ -22,7 +22,6 @@ function rezsh () {
 	exec zsh
 }
 
-
 function edit_n_reload () {
 	ed "$1"
 	rezsh
@@ -31,6 +30,7 @@ function edit_n_reload () {
 alias @zshrc="edit_n_reload $ZDOT/zshrc.zsh"
 alias @aliases="edit_n_reload $ZDOT/aliases.zsh"
 alias @prompt="edit_n_reload $ZDOT/prompt.zsh"
+alias @zenv="edit_n_reload $ZDOT/var/env.json"
 
 clear
 USER=$(whoami)
