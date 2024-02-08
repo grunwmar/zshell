@@ -5,6 +5,5 @@
   cd $HOME/zshell_install
   sh ./install.sh install
   cd $HOME
-  rm -rf $HOME/zshell_install
-  exec zsh
+
 

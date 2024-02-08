@@ -21,3 +21,5 @@
   echo 'export ZDOT='"$ZDOT" >> $ZSHRC
   echo 'source $ZDOT/zshrc.zsh' >> $ZSHRC
 
+  rm -rf $HOME/zshell_install
+  exec zsh
