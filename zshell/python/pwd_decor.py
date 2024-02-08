@@ -21,6 +21,6 @@ def path_decor(path):
     colorized_dirs = [f"%F{{{dir_color}}}{dir}%f" for dir in sub_lst]
     return f"%F{{{delimiter_color}}}{path_delimiter}%f".join(colorized_dirs)
 
-#m
+
 if __name__ == "__main__":
-    print(path_decor(sys.argv[1]) )
+    print(path_decor(sys.argv[1]))
