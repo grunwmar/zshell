@@ -22,4 +22,4 @@
   echo 'source $ZDOT/zshrc.zsh' >> $ZSHRC
 
   rm -rf $HOME/zshell_install
-  exec zsh
+  exec $(which zsh)
