@@ -13,3 +13,8 @@ fi
 
 alias la="ls -Ap"
 alias ll="ls -lAhp"
+
+function cl() {
+    cd "$1"
+    ls "$2"
+}
