@@ -10,7 +10,7 @@ precmd() {
 
   COLS=$(tput cols)
   if [[ $COLS -ge 70 ]]; then
-    RPROMPT="%(?..%F{9}%?%f) %F{4}${HOSTNAME}%f %F{14}%T%f"
+    RPROMPT="%(?..%F{9}%?%f) %F{7}${HOSTNAME}%f %F{14}%T%f"
     else
     RPROMPT=""
   fi
