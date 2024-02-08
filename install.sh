@@ -3,7 +3,7 @@
   ZDOT="$HOME/.zshell"
   ZSHRC="$HOME/.zshrc"
 
-  echo -n "Remove old .zshrc and .zshell file and directory (required for intstall)? [y/N] "
+  echo -n "Remove old .zshrc and .zshell file and directory (required for install)? [y/N] "
   read answ
 
   case $answ in
