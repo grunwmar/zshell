@@ -2,7 +2,6 @@
 
   ZDOT="$HOME/.zshell"
   ZSHRC="$HOME/.zshrc"
-  cd $HOME
 
   echo "Remove old .zshrc and .zshell file and directory (required for intstall)? [y/N] "
   read answ
