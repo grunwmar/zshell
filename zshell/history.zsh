@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-HISTFILE="$ZDOT/.zsh_history.log"
+HISTFILE="$ZDOT/zsh_history.log"
 HISTSIZE=10000000
 SAVEHIST=10000000
 

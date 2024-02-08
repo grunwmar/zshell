@@ -10,6 +10,8 @@
 
 # Zsh history
 .zsh_history
+.zsh_history.log
+zsh_history.log
 
 # Zsh sessions
 .zsh_sessions
