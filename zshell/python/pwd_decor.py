@@ -23,4 +23,4 @@ def path_decor(path):
 
 #m
 if __name__ == "__main__":
-    print(path_decor(sys.argv[1]))
+    print(path_decor(sys.argv[1]) )
