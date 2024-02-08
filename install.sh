@@ -9,7 +9,7 @@
 
   case $answ in
     "y"|"Y"|"yes"|"Yes"|"YES")
-      rm -rf .zshell .zshrc
+      rm -rf $HOME/.zshell $HOME/.zshrc
     ;;
     *)
       exit
