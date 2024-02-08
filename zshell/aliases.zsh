@@ -16,5 +16,5 @@ alias ll="ls -lAhp"
 
 function cl() {
     cd "$1"
-    ls "$2"
+    ls
 }
