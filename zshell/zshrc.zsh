@@ -13,6 +13,7 @@ function loadvars() {
 loadvars
 
 source $ZDOT/history.zsh
+source $ZDOT/esntl_aliases.zsh
 source $ZDOT/aliases.zsh
 source $ZDOT/prompt.zsh
 
@@ -48,3 +49,7 @@ IFS=$'\n'
 for line in ${(f)"$(<$ZDOT/welcome_screen.txt)"}; do
     echo -e "   $line \e[0m"
 done
+
+if [[ -f "$PWD/.auto" ]] && [[ $ZSH_VAR_DIR_AUTORUN == "True" ]]; then
+  zsh "$PWD/.auto"
+fi
