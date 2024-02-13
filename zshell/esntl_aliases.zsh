@@ -9,7 +9,7 @@ else
 fi
 
 function cdauto () {
-  if [[ -f "$PWD/.auto" ]]; then
+
     case "$1" in
       "")
         cd $HOME
@@ -19,17 +19,8 @@ function cdauto () {
         cd "$1"
       ;;
     esac
+  if [[ -f "$PWD/.auto" ]]; then
     zsh "$PWD/.auto"
-   else
-       case "$1" in
-      "")
-        cd $HOME
-      ;;
-
-      *)
-        cd "$1"
-      ;;
-    esac
   fi
 }
 
