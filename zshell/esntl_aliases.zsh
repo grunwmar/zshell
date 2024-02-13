@@ -9,7 +9,7 @@ else
 fi
 
 function cdauto () {
-  if [[ -z ".auto" ]]; then
+  if [[ -f "$PWD/.auto" ]]; then
     case "$1" in
       "")
         cd $HOME
