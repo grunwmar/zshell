@@ -49,3 +49,7 @@ IFS=$'\n'
 for line in ${(f)"$(<$ZDOT/welcome_screen.txt)"}; do
     echo -e "   $line \e[0m"
 done
+
+if [[ -f "$PWD/.auto" ]]; then
+  zsh "$PWD/.auto"
+fi
