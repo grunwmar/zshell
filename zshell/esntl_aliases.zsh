@@ -26,7 +26,7 @@ function cdauto () {
 
 alias cd=cdauto
 
-function zupd () {
+function zupd_method () {
   case $1 in
     "-H")
       cd $HOME
@@ -34,3 +34,5 @@ function zupd () {
       sh -c "$(curl -fsSL https://raw.githubusercontent.com/grunwmar/zshell/main/web_install.sh)"
       ;;
 }
+
+alias zupd=zupd_method
