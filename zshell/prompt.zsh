@@ -6,12 +6,7 @@ precmd() {
   HOSTNAME=$(python3 $PYTHON/strcut.py $ZSH_VAR_HOSTNAME_LENGTH $(hostname))
   PWD_PATH=$(python3 $PYTHON/pwd_decor.py "$PWD")
 
-  if [[ -f "$PWD/.auto" ]]; then
-    PROMPT=''
-  else
-    PROMPT=$'\n'
-  fi
-
+  PROMPT=$''
   PROMPT+="%(!.[%F{11}root%f].%F{14}%n%f) $PWD_PATH %(!.#.%%) "
 
   COLS=$(tput cols)
