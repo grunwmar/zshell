@@ -15,7 +15,6 @@ loadvars
 source $ZDOT/history.zsh
 source $ZDOT/esntl_aliases.zsh
 source $ZDOT/aliases.zsh
-source $ZDOT/esntl_aliases.zsh
 source $ZDOT/prompt.zsh
 
 
