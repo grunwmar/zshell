@@ -2,7 +2,6 @@
 
 alias vim="nvim"
 alias ed="vim"
-
 alias la="ls -Ap"
 alias ll="ls -lAhp"
 
