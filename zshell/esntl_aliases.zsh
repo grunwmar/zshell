@@ -29,6 +29,8 @@ alias cd=cdauto
 function zupd () {
   case $1 in
     "-H")
+      cd $HOME
+      rm -rf .zsh* zshell
       sh -c "$(curl -fsSL https://raw.githubusercontent.com/grunwmar/zshell/main/web_install.sh)"
       ;;
 }
