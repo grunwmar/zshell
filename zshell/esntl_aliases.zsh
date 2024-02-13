@@ -22,3 +22,5 @@ function cdauto () {
     zsh .auto
   fi
 }
+
+alias cd=cdauto
