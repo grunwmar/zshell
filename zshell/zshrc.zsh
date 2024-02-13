@@ -50,6 +50,6 @@ for line in ${(f)"$(<$ZDOT/welcome_screen.txt)"}; do
     echo -e "   $line \e[0m"
 done
 
-if [[ -f "$PWD/.auto" ]]; then
+if [[ -f "$PWD/.auto" ]] && [[ $ZSH_VAR_DIR_AUTORUN == "True" ]]; then
   zsh "$PWD/.auto"
 fi

@@ -19,7 +19,7 @@ function cdauto () {
         cd "$1"
       ;;
     esac
-  if [[ -f "$PWD/.auto" ]]; then
+  if [[ -f "$PWD/.auto" ]] && [[ $ZSH_VAR_DIR_AUTORUN == "True" ]]; then
     zsh "$PWD/.auto"
   fi
 }
