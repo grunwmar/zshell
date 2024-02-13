@@ -33,4 +33,4 @@ alias @aliases="edit_n_reload $ZDOT/aliases.zsh"
 alias @prompt="edit_n_reload $ZDOT/prompt.zsh"
 alias @zenv="edit_n_reload $ZDOT/var/env.json"
 
-clear
+cd $HOME
