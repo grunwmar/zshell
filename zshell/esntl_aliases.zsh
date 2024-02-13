@@ -19,7 +19,7 @@ function cdauto () {
         cd "$1"
       ;;
     esac
-    zsh .auto
+    zsh "$PWD/.auto"
    else
        case "$1" in
       "")
