@@ -20,6 +20,16 @@ function cdauto () {
       ;;
     esac
     zsh .auto
+   else
+       case "$1" in
+      "")
+        cd $HOME
+      ;;
+
+      *)
+        cd "$1"
+      ;;
+    esac
   fi
 }
 
